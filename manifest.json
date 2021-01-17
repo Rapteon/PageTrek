@@ -26,5 +26,10 @@
         "default_icon": "icons/pagetrek-32.png",
         "default_title": "PageTrek",
         "default_popup": "popup/start_trek.html"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "strict_min_version": "75.0"
+        }
     }
 }
