@@ -22,13 +22,13 @@ browser.tabs
 browser.runtime.onMessage.addListener(linkTestUpdate => {
   console.log('Message from extractions.js')
   statusLine = document.getElementById('status-line')
-  brokenStatusLine = document.getElementById('broken-status-line')
+  // brokenStatusLine = document.getElementById('broken-status-line')
 
   testedLinks = linkTestUpdate.testedLinkCount
   brokenLinks = linkTestUpdate.brokenLinkCount
 
   statusLine.textContent = 'Tested: ' + testedLinks + ' / ' + maxLinks
-  brokenStatusLine.textContent = 'Broken: ' + brokenLinks + ' / ' + maxLinks
+  // brokenStatusLine.textContent = 'Broken: ' + brokenLinks + ' / ' + maxLinks
 
   if (testedLinks === maxLinks && cancelStatus === false) {
     cancelButton = document.getElementById('cancel-trek')
@@ -80,20 +80,20 @@ function startTrek () {
         .sendMessage(tabs[0].id, { command: 'getLinks' })
         .then(response => {
           statusLine = document.getElementById('status-line')
-          brokenStatusLine = document.getElementById('broken-status-line')
+          // brokenStatusLine = document.getElementById('broken-status-line')
           cancelButton = document.getElementById('cancel-trek')
           resetButton = document.getElementById('reset-trek')
 
           maxLinks = response.linkCount
 
           statusLine.textContent = 'Tested: ' + testedLinks + ' / ' + maxLinks
-          brokenStatusLine.textContent =
-            'Broken: ' + brokenLinks + ' / ' + maxLinks
+          // brokenStatusLine.textContent =
+          //   'Broken: ' + brokenLinks + ' / ' + maxLinks
 
           unhideElement(cancelButton)
           unhideElement(statusLine)
           unhideElement(brokenStatusLine)
-
+          
           disableButton(startButton)
         })
         .catch(errorHappens)
