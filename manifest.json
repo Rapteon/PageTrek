@@ -1,0 +1,30 @@
+{
+    "manifest_version":2,
+    "name":"PageTrek",
+
+    "version":"1.0",        
+
+    "description":"Highlights dead links in a page.",
+    "icons": {
+        "48":"icons/pagetrek-48.png"
+    },
+
+    "permissions": [
+        "activeTab",
+        "webRequest",
+        "<all_urls>",
+        "tabs"
+    ],
+
+    "content_scripts": [
+        {
+            "matches" : ["<all_urls>"],
+            "js": ["extraction.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icons/pagetrek-32.png",
+        "default_title": "PageTrek",
+        "default_popup": "popup/start_trek.html"
+    }
+}

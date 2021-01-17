@@ -1,0 +1,113 @@
+body {
+  width: 10em;
+  background-color: #ffecb5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 8px;
+}
+
+button {
+  margin: 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 8px;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+[id='logo-container'] {
+  display: flex;
+  flex-direction: row;
+}
+
+[id='start-trek'] {
+  background-color: #6495ed;
+  padding: 4px;
+  color: whitesmoke;
+  border-color: #73ccf0;
+  animation-name: animate-start-button;
+}
+
+[id='reset-trek'] {
+  background-color: #eda76f;
+  padding: 4px;
+  color: black;
+  border-color: #cf9261;
+  animation-name: animate-button;
+  animation-name: animate-reset-button;
+  animation-delay: 1s;
+}
+
+[id='cancel-trek'] {
+  background-color: #ed8c7b;
+  padding: 4px;
+  color: whitesmoke;
+  border-style: solid;
+  border-color: #e96751;
+  animation-name: animate-button;
+  animation-name: animate-reset-button;
+}
+[id="status-content"]{
+  display: flex;
+  flex-direction:column;
+  justify-items:"center";
+  align-items: "center";
+}
+
+[id="broken-status-line"]{
+  color:red;
+}
+@keyframes animate-start-button {
+  0% {
+    border-color: #73ccf0;
+  }
+  50% {
+    border-color: #579ab5;
+  }
+  100% {
+    border-color: #73ccf0;
+  }
+  50%{
+    border-color: #579ab5;
+  }
+  0%{
+    border-color: #73ccf0;
+  }
+}
+
+@keyframes animate-reset-button {
+  0% {
+    border-color: #eda76f;
+  }
+  50% {
+    border-color: #cf9261;
+  }
+  100% {
+    border-color: #eda76f;
+  }
+  50% {
+    border-color: #cf9261;
+  }
+  0% {
+    border-color: #eda76f;
+  }
+}
+
+.to-click {
+  margin: auto;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

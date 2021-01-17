@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PageTrek</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="start_trek.css">
+        <link rel="stylesheet" type="text/css" href="//brick.freetls.fastly.net/Fira+Sans:400">
+        <script type="text/javascript" src="start_trek.js" defer></script>
+    </head>
+    <body>
+        <div id="popup-content">
+            <div id="logo-container">
+                <img src="../icons/pagetrek-32.png">
+                <h3>PageTrek</h3>
+            </div>
+            <hr>
+            <button id="start-trek" class="to-click">Find Links!</button>
+            <button id="reset-trek" class="to-click">Reset</button>
+        </div>
+        <button id="cancel-trek" class="hidden">Cancel</button>
+        <div id="status-content">
+            <p id="status-line" class="hidden">Tested: </p> <!--Meant to have the value like "Tested: 0/100 links" -->
+            <p id="broken-status-line" class="hidden">Broken: </p> <!--Meant to have the value like "Broken: 0/100 links" -->
+        </div>
+    </body>
+</html>
