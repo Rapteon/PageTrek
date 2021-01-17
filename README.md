@@ -1,2 +1,2 @@
 # PageTrek
-A link validation add-on for Firefox.
+A broken link finder add-on for Firefox.
